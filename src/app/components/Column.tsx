@@ -16,7 +16,7 @@ const columnTitles: Record<string, string> = {
     done: "Done",
   };
 
-export default function Column({ columnId, tasks, onEditTask, onDeleteTask }: ColumnProps) {    
+export default function Column({ columnId, tasks, onEditTask, onDeleteTask }: ColumnProps) {  
   return (
     <Droppable droppableId={columnId}>
       {(provided) => (

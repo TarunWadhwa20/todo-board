@@ -30,19 +30,6 @@ export default function KanbanBoard() {
       });
     });
   }, []);
-
-//   const onDragEnd = (result: DropResult) => {
-//     if (!result.destination) return;
-//     const { source, destination } = result;
-//     const movedTask = tasks[source.droppableId][source.index];
-//     movedTask.completed = destination.droppableId === "done";
-
-//     setTasks((prev) => ({
-//       ...prev,
-//       [source.droppableId]: prev[source.droppableId].filter((_, i) => i !== source.index),
-//       [destination.droppableId]: [...prev[destination.droppableId], movedTask],
-//     }));
-//   };
  
 const handleDragEnd = (result: DropResult) => {
     if (!result.destination) return; // Ignore if dropped outside
@@ -93,10 +80,11 @@ const handleDragEnd = (result: DropResult) => {
             const updatedTask = await updateTodo(editingTask.id, taskText, editingTask.status);
             setTasks((prev) => ({
               ...prev,
-              [editingTask.completed ? "done" : "todo"]: prev[
-                editingTask.completed ? "done" : "todo"
+              [editingTask.status]: prev[
+                editingTask.status
               ].map((task) => (task.id === updatedTask.id ? updatedTask : task)),
             }));
+            
             setToast({ message: "Task updated successfully!", type: "success" });
         } catch (error) {
             console.log(error);  
