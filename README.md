@@ -30,8 +30,7 @@ This project is a **Trello-style ToDo board** built with **Next.js, TypeScript, 
 │   ├── page.tsx            # Main ToDo board page
 ├── 📂 utils
 │   ├── api.ts              # API functions for CRUD operations
-├── 📂 styles
-│   ├── globals.css         # Global styles
+├── globals.css             # Global styles
 ├── 📜 README.md            # Project documentation
 ├── 📜 package.json         # Dependencies and scripts
 ```
@@ -56,7 +55,7 @@ yarn dev
 # or
 npm run dev
 ```
-🔗 Open [http://localhost:3000](http://localhost:3000) to view the app.
+🔗 Open `https://todo-board-three.vercel.app/` to view the app.
 
 ## 📌 How It Works
 1. **Drag tasks** between columns (To Do, Pending, In Progress, Done).
@@ -88,4 +87,4 @@ This project is licensed under the **MIT License**.
 Feel free to open issues or submit pull requests to improve the project!
 
 ---
-📌 **GitHub Repository:** https://github.com/tarunwadhwa20/trello-board
+📌 **GitHub Repository:** `https://github.com/tarunwadhwa20/trello-board`
